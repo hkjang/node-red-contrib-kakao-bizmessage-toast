@@ -1,0 +1,23 @@
+{
+  "name": "node-red-contrib-kakao-bizmessage-toast",
+  "version": "1.0.0",
+  "description": "Node-RED node for kakao-bizmessage-toast",
+  "main": "node.js",
+  "scripts": {
+    "test": "mocha \"test/**/*_spec.js\" --timeout 3000"
+  },
+  "node-red": {
+    "nodes": {
+      "kakao-bizmessage-toast": "node.js"
+    }
+  },
+  "keywords": [
+    "node-red-contrib-contribgen", 
+    "node-red", 
+    "kakao-bizmessage-toast"
+  ],
+  "devDependencies": {
+    "kakao-bizmessage-toast": "^1.1.0"
+  },
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,94 @@
+<script type="text/html" data-template-name="kakao-bizmessage-toast">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span
+                data-i18n="node-red:common.label.name"></span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-creds"> <i class="fa fa-key fa-fw"></i> toast key</span></label>
+        <input type="text" id="node-input-creds">
+    </div>
+    <div class="form-row"><label for="node-input-api"><i class="fa fa-api"></i> api</label> <input type="text"
+                                                                                                   id="node-input-api"
+                                                                                                   placeholder="api">
+    </div>
+    <div class="form-row"><label for="node-input-templateCode"><i class="fa"></i> templateCode</label> <input
+            type="text" id="node-input-templateCode" placeholder="templateCode"></div>
+</script>
+
+<script type="text/html" data-help-name="kakao-bizmessage-toast">
+    <p>Summary of the node.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object</span></dt>
+        <dd>Explanation of payload.</dd>
+        <dt class="optional">topic <span class="property-type">string</span></dt>
+        <dd>Explanation of topic.</dd>
+    </dl>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object</span></dt>
+        <dd>Explanation of payload.</dd>
+        <dt class="optional">topic<span class="property-type">string</span></dt>
+        <dd>Explanation of topic.</dd>
+    </dl>
+    <h3>Details</h3>
+    <p>Explanation of the details.</p>
+    <p><b>Note</b>: Note of the node.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('kakao-bizmessage-toast', {
+        color: '#ffdc00',
+        category: 'function',
+        defaults: {
+            name: {value: ''},
+            api: {value: "", required: false},
+            templateCode: {value: "", required: false},
+            creds: {
+                value: "",
+                type: "toastkey"
+            },
+        },
+        inputs: 1,
+        outputs: 1,
+        label: function () {
+            return this.name || 'kakao-bizmessage-toast';
+        },
+        icon: 'icon.png',
+        align: 'left'
+    });
+</script>
+
+
+<script type="text/x-red" data-template-name="toastkey">
+    <div class="form-row">
+        <label for="node-input-name"> <i class="fa fa-tag fa-fw"></i> Name</label>
+        <input type="text" id="node-config-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+      <label for="node-config-input-appKey"> App Key</label>
+      <input type="text" id="node-config-input-appKey" placeholder="App Key">
+    </div>
+    <div class="form-row">
+      <label for="node-config-input-secretKey"> Secret Key</label>
+      <input type="text" id="node-config-input-secretKey" placeholder="Secret Key">
+    </div>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('toastkey', {
+        category: 'config',
+        defaults: {
+            name: {value:""}
+        },
+        credentials: {
+            appKey: {},
+            secretKey: {},
+        },
+        label: function () {
+            return this.name || 'Toast Key';
+        }
+    });
+</script>
