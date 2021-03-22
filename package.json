@@ -1,10 +1,18 @@
 {
   "name": "node-red-contrib-kakao-bizmessage-toast",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node-RED node for kakao-bizmessage-toast",
   "main": "node.js",
   "scripts": {
     "test": "mocha \"test/**/*_spec.js\" --timeout 3000"
+  },
+  "bugs": {
+    "url": "https://github.com/hkjang/node-red-contrib-kakao-bizmessage-toast/issues"
+  },
+  "homepage": "https://github.com/hkjang/node-red-contrib-kakao-bizmessage-toast#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkjang/node-red-contrib-kakao-bizmessage-toast.git"
   },
   "node-red": {
     "nodes": {
